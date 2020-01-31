@@ -1,0 +1,33 @@
+#workspace > .drawer,
+#workspace > .control,
+#workspace > .window,
+#workspace > .window > .bar {
+    background-color: white;
+    color: black;
+}
+
+#navbar {
+    background-color: #32333088;
+}
+
+#navbar > div.controls > div.notifications > div {
+    color: white;
+}
+
+#navbar > div.activators > div:hover,
+#navbar > div.controls > div.hide:hover,
+#navbar > div.controls > div.notifications > div:hover {
+    background-color: #fff2;
+}
+
+#navbar > div.controls > div.hide {
+    border-left: 1px solid #32333022;
+}
+
+#navbar > .controls > .clock > div {
+    color: white;
+}
+
+#navbar > div.activators > div.menu {
+    color: white;
+}

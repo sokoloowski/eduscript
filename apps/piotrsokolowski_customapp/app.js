@@ -1,0 +1,2 @@
+var piotrsokolowski_customapp = new App('piotrsokolowski_customapp', 'My custom app');
+piotrsokolowski_customapp.content = '<h1>Hi there!</h1><p>This is my first app written with Codewriter in Eduscript!</p>';

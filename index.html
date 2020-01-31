@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>EduScript</title>
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/default.css">
+</head>
+<body>
+    <div id="workspace">
+        <div class="drawer"></div>
+
+        <div class="control battery">
+            <div></div>
+        </div>
+
+        <div class="control networking">
+            <div></div>
+        </div>
+    </div>
+    <div id="navbar">
+        <div class="activators"></div>
+        <div class="controls">
+            <div class="notifications">
+                <div id="battery"></div>
+                <div id="networking"></div>
+            </div>
+            <div class="clock">
+                <div id="hours"></div>
+                <div id="day"></div>
+            </div>
+            <div class="hide"></div>
+        </div>
+    </div>
+    
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery-ui.min.js"></script>
+    <script src="lib/client.min.js"></script>
+    <script src="js/class.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/startup.js"></script>
+    
+    <script>if (window.module) module = window.module;</script>
+</body>
+</html>

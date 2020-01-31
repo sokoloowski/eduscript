@@ -1,0 +1,14 @@
+{
+  "name": "eduscript",
+  "version": "1.0.0",
+  "description": "EduScript jest programem stworzonym z myślą o osobach rozpoczynających swoją przygodę z programowaniem.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^7.1.7"
+  }
+}
