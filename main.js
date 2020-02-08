@@ -1,6 +1,4 @@
 const { app, BrowserWindow } = require('electron')
-// Zachowaj globalną referencję obiektu okna, jeśli tego nie zrobisz, okno 
-// zostanie zamknięte automatycznie, gdy obiekt JavaScript odśmieci pamięć.
 let win
 
 function createWindow () {
@@ -8,17 +6,18 @@ function createWindow () {
 	win = new BrowserWindow({
 		width: 1024,
 		height: 600,
+		useContentSize: true,
 		webPreferences: {
+			// TODO: Remove developer tools in final version
 			// devTools: false,
 			nodeIntegration: true
 		},
-		icon: 'favicon.png'
+		icon: 'resources/app/favicon.png'
 	})
 
-	// i ładowanie index.html aplikacji.
+	// Load index.html
 	win.loadFile('index.html')
 
-	// Emitowane, gdy okno jest zamknięte.
 	win.on('closed', () => {
 		// Dereference the window object, usually you would store windows
 		// in an array if your app supports multi windows, this is the time
@@ -27,6 +26,7 @@ function createWindow () {
 	})
 
 	win.setAutoHideMenuBar(true);
+	// TODO: Remove menu bar in final version
 	// win.removeMenu();
 }
 
@@ -35,7 +35,7 @@ function createWindow () {
 // Some APIs can only be used after this event occurs.
 app.on('ready', createWindow)
 
-// Zamknij, gdy wszystkie okna są zamknięte.
+// Close app when all windows are closed
 app.on('window-all-closed', () => {
 	// On macOS it is common for applications and their menu bar
 	// to stay active until the user quits explicitly with Cmd + Q
@@ -51,6 +51,3 @@ app.on('activate', () => {
 		createWindow()
 	}
 })
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
