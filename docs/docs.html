@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="theme-color" content="#212121" />
+        <title>EduScript</title>
+        <link rel="shortcut icon" href="favicon.png" type="image/png" />
+        <link rel="icon" href="favicon.png" />
+        <link rel="apple-touch-icon" href="favicon.png" />
+        <link rel="apple-touch-startup-image" href="favicon.png" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://www.piotrsokolowski.tk/cdn/highlightjs/css/vscode-default.css" />
+        <script src="https://www.piotrsokolowski.tk/cdn/highlightjs/js/highlight.min.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>EduScript</h1>
+        </header>
+        <nav>
+            <a class="btn" href="index.html">Strona główna</a>
+            <a class="btn" href="docs.html">Dokumentacja</a>
+            <a class="btn" href="https://github.com/sokoloowski/eduscript" target="_blank"
+                >Github<svg viewBox="0 0 16 16" version="1.1">
+                    <path
+                        fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    ></path></svg
+            ></a>
+        </nav>
+        <main>
+            <h1><img style="height:0.75em;width:initial;" src="eduscript.png" alt="eduscript" /> EduScript</h1>
+            <p>
+                EduScript jest programem stworzonym z myślą o osobach rozpoczynających swoją przygodę z programowaniem. Został napisany w języku JavaScript i
+                ten język jest również wykorzystywany do nauki w programie. Napisany kod można przetestować jednym kliknięciem, a wynik działania wyświetlany
+                jest w okienku. Program został zaprojektowany tak, aby użytkownik bez problemu odnalazł potrzebne funkcje.
+            </p>
+            <p>Tworzenie nowej aplikacji w EduScript nie powinno sprawiać większych problemów nawet osobom, które wcześniej nie programowały.</p>
+
+            <h2 id="user-interface">Interfejs użytkownika</h2>
+            <p>
+                Interfejs przypomina system operacyjny, a pisane skrypty są uruchamiane jako programy tego systemu. To sprawia, że całość jest spójna, a
+                użytkownik nie musi wyrabiać sobie nowych nawyków.
+            </p>
+            <figure>
+                <img src="documentation/1.png" alt="UI in EduScript" style="width:100%" />
+                <figcaption>Interfejs użytkownika w EduScript</figcaption>
+            </figure>
+            <p>
+                Interfejs jest stylizowany na ten znany z Windows 10. Można tu znaleźć proste menu aplikacji, pasek uruchomionych aplikacji, ikony informujące o
+                stanie urządzenia (poziom naładowania baterii oraz połączenie z internetem), a także obecną datę i godzinę. Aby łatwiej odnaleźć się wsród
+                otwartych okien, można najechać na lewy dolny róg aplikacji, a okna staną się półprzezroczyste.
+            </p>
+            <figure>
+                <img src="documentation/2.png" alt="Opaque windows" style="width:100%" />
+                <img src="documentation/3.png" alt="Translucent windows" style="width:100%" />
+                <figcaption>Półprzezroczystość w EduScript</figcaption>
+            </figure>
+
+            <h2 id="script-writing">Pisanie skryptów</h2>
+            <p>
+                EduScript zawiera gotowe programy przeznaczone do tworzenia skryptów. Aplikacja Codewriter jest prostym notatnikiem, z poziomu którego można
+                uruchomić skrypt oraz go zapisać, a Explorer pozwala na zarządzanie zapisanymi skryptami.
+            </p>
+            <figure>
+                <img src="documentation/4.png" alt="Codewriter and Explorer apps" style="width:100%" />
+                <figcaption>Aplikacje Codewriter i Explorer</figcaption>
+            </figure>
+            <p>Aby tworzyć skrypty używające okien EduScript, należy skorzystać z predefiniowanych funkcji.</p>
+            <figure>
+                <img src="documentation/5.png" alt="Hello world app" style="width:100%" />
+                <figcaption>Prosta aplikacja <i>Hello world</i></figcaption>
+            </figure>
+            <p>Aplikacja okienkowa to obiekt klasy App(), a składnia wygląda następująco:</p>
+            <pre><code class="js">var nazwa = new App(name, title, icon, style);</code></pre>
+            <p>Utworzony obiekt posiada następujące właściwości:</p>
+            <ul>
+                <li><code>nazwa.name</code> – nazwa aplikacji (wymagane),</li>
+                <li><code>nazwa.title</code> – tytuł wyświetlany na oknie (domyślnie „Okno”),</li>
+                <li><code>nazwa.icon</code> – ścieżka do ikony aplikacji,</li>
+                <li><code>nazwa.content</code> – zawartość okna (domyślnie pusta),</li>
+                <li><code>nazwa.style</code> – styl okna (domyślnie „classic”).</li>
+            </ul>
+            <p>Oprócz właściwości, obiekt posiada także metody:</p>
+            <ul>
+                <li><code>nazwa.functions()</code> – funkcje definiowane przez użytkownika,</li>
+                <li><code>nazwa.app()</code> – stworzenie okna.</li>
+            </ul>
+            <p>
+                Użytkownik może też tworzyć własne właściwości i metody, które później wykorzysta w pracy skryptu, co jest bezpieczniejszym rozwiązaniem niż
+                korzystanie ze zmiennych (może dojść do nadpisania zmiennych EduScript).
+            </p>
+            <p>
+                Struktura zawartości okna jest pisana za pomocą języka HTML, a styl w języku CSS. Pozwala to na stworzenie aplikacji o skalowalnym interfejsie.
+            </p>
+
+            <h2 id="window-styling">Stylowanie okna</h2>
+            <p>
+                Domyślnym stylem okna jest classic, czyli zwykłe okno. Inne predefiniowane style to transparent i alert. Zamiast stylu można też wpisać kolor w
+                formacie szestnastkowym (np. <span style="background-color:#f0db4f;color:#323330;padding:5px;border-radius:5px;">F0DB4F</span>). Wtedy belka
+                okna przyjmuje podany kolor. Styl okna definiuje się przy definiowaniu obiektu nowej aplikacji.
+            </p>
+            <p>Funkcja <code>newWindow()</code> przyjmuje 5 parametrów i tworzy nowe okno z domyślną belką. Jej składnia wygląda następująco:</p>
+            <pre><code class="js">newWindow(name, icon, title, content, style);</code></pre>
+            <p>Wszystkie parametry tej funkcji są obowiązkowe. Funkcja wywołuje następujące polecenia:</p>
+            <ul>
+                <li>dołącza do obszaru roboczego nowy kontener klasy window o nazwie podanej w parametrze,</li>
+                <li>czyni okno przeciągalnym (można umieścić okno w dowolnym miejscu przestrzeni roboczej,</li>
+                <li>umożliwia zmianę rozmiaru okna.</li>
+            </ul>
+            <p>Funkcja <code>bar()</code> przyjmuje 3 parametry i tworzy belkę okna. Sposób wywołania funkcji jest następujący:</p>
+            <pre><code class="js">bar(icon, title, style);</code></pre>
+            <p>
+                Wszystkie parametry tej funkcji są obowiązkowe. Funkcja zwraca kod HTML belki aplikacji. W ramach funkcji <code>bar()</code> wykonywana jest
+                funkcja <code>stateButtons()</code>, która nie przyjmuje parametrów i tworzy przyciski minimalizacji, maksymalizacji i zamykania okna.
+            </p>
+            <p>
+                Istnieje jednak możliwość samodzielnego stworzenia okna. Służą do tego funkcje <code>bar()</code> i <code>newWindow()</code>. W tym celu należy
+                przy definicji aplikacji zmodyfikować metodę <code>app()</code>, króra domyślnie tworzy standardowe okno.
+            </p>
+            <figure>
+                <img src="documentation/6.png" alt="Creating new window" style="width:100%" />
+                <figcaption>Tworzenie nowego okna - funkcja <code>newWindow()</code></figcaption>
+            </figure>
+
+            <h2 id="error-handling">Obsługa błędów</h2>
+            <p>
+                Jeśli podczas próby wykonania skryptu program napotka błąd, użytkownik zostanie poinformowany stosownym komunikatem. Zazwyczaj jest to
+                spowodowane błędnie wpisaną nazwą zmiennej lub instrukcji.
+            </p>
+            <figure>
+                <img src="documentation/7.png" alt="Creating new window" style="width:100%" />
+                <figcaption>Komunikat błędu <q>promp nie jest zdefiniowany</q></figcaption>
+            </figure>
+            <p>Może się też jednak zdarzyć, że poprawnie napisany kod nie będzie działał przez ograniczenia programu</p>
+            <figure>
+                <img src="documentation/8.png" alt="Creating new window" style="width:100%" />
+                <figcaption>Komunikat błędu o niewspieranej funkcji</figcaption>
+            </figure>
+
+            <h2 id="about-program">O programie</h2>
+            <p>
+                EduScript jest aplikacją stworzoną w językach HTML, CSS (w tym jQuery UI) i JavaScript (jQuery), opakowaną w framework Electron wykorzystywany
+                m.in. w takich programach jak Skype, GitHub Desktop, Discord, Visual Studio Code, Slack i Atom. Dzięki temu jest dostępny na platformach
+                Windows, Linux i macOS.
+            </p>
+        </main>
+        <aside style="position:sticky;top:120px;">
+            <section>
+                <h2>Spis treści:</h2>
+                <ul>
+                    <li><a href="#user-interface">Interfejs użytkownika</a></li>
+                    <li><a href="#script-writing">Pisanie skryptów</a></li>
+                    <li><a href="#window-styling">Stylowanie okna</a></li>
+                    <li><a href="#error-handling">Obsługa błędów</a></li>
+                    <li><a href="#about-program">O programie</a></li>
+                </ul>
+            </section>
+        </aside>
+        <footer>
+            &copy;&nbsp;
+            <script>
+                document.write(new Date().getFullYear());
+            </script>
+            &nbsp;|&nbsp;<a target="_blank" href="https://piotrsokolowski.tk/">Sokol👀wski</a>
+        </footer>
+    </body>
+</html>
