@@ -1,4 +1,11 @@
 var path, settings, current;
+var fs = require("fs");
+if (!fs.existsSync("current_settings.json")) {
+    fs.writeFileSync(
+        "current_settings.json",
+        JSON.stringify({ wallpaper: "wallpapers/eduscript.png" }, null, 4)
+    );
+}
 
 $.ajax({
     url: "eduscript_settings.json",
