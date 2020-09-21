@@ -1,3 +1,3 @@
 // Startup functions
 checkWindows();
-$('body').css('background-image', `url(${current['wallpaper']})`);
+$("body").css("background-image", `url(${current["wallpaper"]})`);
