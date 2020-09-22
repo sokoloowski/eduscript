@@ -296,10 +296,10 @@ $("#workspace").on("click", ".window", function () {
 
 $(".hide").on({
     mouseenter: function () {
-        $(".window").css("opacity", "0.5");
+        $(".window").css("filter", "blur(8px) opacity(0.5)");
     },
     mouseleave: function () {
-        $(".window").css("opacity", "1");
+        $(".window").css("filter", "");
     },
     click: function () {
         $(".window").hide();
