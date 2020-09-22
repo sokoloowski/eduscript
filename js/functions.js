@@ -1,4 +1,3 @@
-var path, settings, current;
 var fs = require("fs");
 if (!fs.existsSync("current_settings.json")) {
     fs.writeFileSync(
@@ -7,26 +6,9 @@ if (!fs.existsSync("current_settings.json")) {
     );
 }
 
-$.ajax({
-    url: "eduscript_settings.json",
-    success: function (s) {
-        settings = s;
-    },
-});
-
-$.ajax({
-    url: "current_settings.json",
-    success: function (s) {
-        current = s;
-    },
-});
-
-$.ajax({
-    url: "apps/userApps.json",
-    success: function (s) {
-        path = s;
-    },
-});
+var path = require("./apps/userApps.json");
+var settings = require("./eduscript_settings.json");
+var current = require("./current_settings.json");
 
 var iconColor = "white";
 
