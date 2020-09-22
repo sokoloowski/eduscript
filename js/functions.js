@@ -20,7 +20,7 @@ if ($('link[rel="stylesheet"]:last-child').attr("href").match(/light/gi)) {
     var iconColor = "white";
 }
 
-// Battery
+//#region Battery
 setInterval(() => {
     navigator.getBattery().then(function (battery) {
         function updateAllBatteryInfo() {
@@ -113,9 +113,9 @@ setInterval(() => {
         }
     });
 }, 500);
-// Battery - end
+//#endregion
 
-// Date
+//#region Date
 setInterval(() => {
     var now = new Date();
     var hours = now.getHours();
@@ -132,9 +132,9 @@ setInterval(() => {
     $("#hours").text(`${hours}:${min}`);
     $("#day").text(`${day}.${month}.${year}`);
 }, 500);
-// Date - end
+//#endregion
 
-// Controls
+//#region Controls
 $("#navbar").on("click", "#battery", function () {
     $(".control.battery").toggle();
 });
@@ -158,10 +158,10 @@ setInterval(() => {
         $("#networking").attr("title", "Disconnected");
     }
 }, 500);
-// Controls - end
+//#endregion
 
-// App drawer
-// Toggle drawer
+//#region App drawer
+//#region Toggle drawer
 $("#navbar").on("click", ".menu", function () {
     $(".drawer").toggle();
 });
@@ -169,9 +169,9 @@ $("#navbar").on("click", ".menu", function () {
 $(".drawer").on("click", ".app", function () {
     $(".drawer").hide();
 });
-// Toggle drawer - end
+//#endregion
 
-// Display apps in drawer
+//#region Display apps in drawer
 var appList = [];
 var tmpAppList = [];
 
@@ -218,8 +218,8 @@ if (appList.length == 1 && appList[0] == "") {
         `);
     }
 }
-// Display apps in drawer - end
-// App drawer - end
+//#endregion
+//#endregion
 
 // Activators
 $("#navbar>.activators").on("click", ".enabled", function () {
