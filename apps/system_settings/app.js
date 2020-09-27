@@ -51,7 +51,7 @@ system_settings.install = (name, code) => {
     try {
         // Install app
         fs.mkdirSync(`apps/${name}`);
-        fs.writeFileSync(`apps/${name}/app.js`, code);
+        fs.writeFileSync(`apps/${name}/app.js`, code.replace(/\&quot;/ig, '"'));
         fs.copyFileSync('apps/default/icon-black.png', `apps/${name}/icon-black.png`);
         fs.copyFileSync('apps/default/icon-white.png', `apps/${name}/icon-white.png`);
         appList.push(name);

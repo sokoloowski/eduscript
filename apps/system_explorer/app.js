@@ -15,8 +15,8 @@ system_explorer.readFiles = () => {
             ${k}
             <button title="Delete" onclick="system_explorer.removeFile('${k}')" class="red"><i class="material-icons">delete</i></button>
             <button title="Open in Codewriter" onclick="checkWindows(system_code,path['${k}'])"><i class="material-icons">code</i></button>
-            <button title="Launch" onclick="${path[k]}"><i class="material-icons">launch</i></button>
-            <button title="Install" onclick="system_settings.install(\`${k}\`,\`${path[k]}\`)"><i class="material-icons">save_alt</i></button>
+            <button title="Launch" onclick="${path[k].replace(/\"/ig, '&quot;')}"><i class="material-icons">launch</i></button>
+            <button title="Install" onclick="system_settings.install(\`${k}\`,\`${path[k].replace(/\"/ig, '&quot;')}\`)"><i class="material-icons">save_alt</i></button>
         </p>`;
     }
 }

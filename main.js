@@ -12,7 +12,8 @@ function createWindow() {
             // devTools: false,
             nodeIntegration: true,
         },
-        icon: "resources/app/favicon.png",
+        icon: "favicon.png",
+        title: "EduScript",
     });
 
     // Load index.html
